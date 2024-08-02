@@ -39,7 +39,7 @@ public class LoginTest {
     @Test
     public void testLogin() {
         // Open the login page
-        driver.get("http://localhost/api-flora/login.php");
+        driver.get("http://localhost/api-flora-website/login.php");
 
         // Find and fill the email field
         WebElement emailField = driver.findElement(By.name("email"));
@@ -54,7 +54,7 @@ public class LoginTest {
         loginButton.click();
 
         // Wait until the landing page is loaded (assuming "home.php" for regular users)
-        wait.until(ExpectedConditions.urlToBe("http://localhost/api-flora/home.php"));
+        wait.until(ExpectedConditions.urlToBe("http://localhost/api-flora-website/home.php"));
 
         // Verify login success by checking if a specific element on the landing page is displayed
         WebElement userWelcomeMessage = driver.findElement(By.xpath("//h3[contains(text(),'Welcome')]"));

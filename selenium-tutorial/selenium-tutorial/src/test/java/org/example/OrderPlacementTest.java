@@ -39,7 +39,7 @@ public class OrderPlacementTest {
     @Test
     public void testPlaceOrder() {
         // Open the login page
-        driver.get("http://localhost/api-flora/login.php");
+        driver.get("http://localhost/api-flora-website/login.php");
 
         // Find and fill the email field
         WebElement emailField = driver.findElement(By.name("email"));
@@ -54,10 +54,10 @@ public class OrderPlacementTest {
         loginButton.click();
 
         // Wait until the landing page is loaded
-        wait.until(ExpectedConditions.urlToBe("http://localhost/api-flora/home.php"));
+        wait.until(ExpectedConditions.urlToBe("http://localhost/api-flora-website/home.php"));
 
         // Open the checkout page
-        driver.get("http://localhost/api-flora/checkout.php");
+        driver.get("http://localhost/api-flora-website/checkout.php");
 
         // Fill in the order details
         driver.findElement(By.name("name")).sendKeys("parami");

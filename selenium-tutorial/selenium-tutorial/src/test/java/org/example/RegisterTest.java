@@ -39,7 +39,7 @@ public class RegisterTest {
     @Test
     public void testRegister() {
         // Open the registration page
-        driver.get("http://localhost/api-flora/register.php");
+        driver.get("http://localhost/api-flora-website/register.php");
 
         // Find and fill the name field
         WebElement nameField = driver.findElement(By.name("name"));
@@ -62,9 +62,9 @@ public class RegisterTest {
         registerButton.click();
 
         // Wait until the login page is loaded
-        wait.until(ExpectedConditions.urlToBe("http://localhost/api-flora/login.php"));
+        wait.until(ExpectedConditions.urlToBe("http://localhost/api-flora-website/login.php"));
 
         // Verify registration success by checking the URL
-        assertTrue(driver.getCurrentUrl().equals("http://localhost/api-flora/login.php"), "Registration failed or redirection to login page not happened.");
+        assertTrue(driver.getCurrentUrl().equals("http://localhost/api-flora-website/login.php"), "Registration failed or redirection to login page not happened.");
     }
 }
